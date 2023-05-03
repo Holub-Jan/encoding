@@ -1,4 +1,3 @@
-# TODO: do the base thing I learned at work with own variable typying
 class BINCMap:
     BINARY: int = 2
     THREE: int = 3

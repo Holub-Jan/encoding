@@ -1,11 +1,13 @@
+import string
+
+from base_six_four.main import BaseBasic
 from binc.main import BINC
 from binc.map import BINCMap
 
+
 if __name__ == "__main__":
-    cod = BINC()
-    nums = [4, 9, 10, 18, 89]
-    for num in nums:
-        to_six = cod.convert(num, _from=BINCMap.DECIMAL, _to=BINCMap.SIX)
-        to_two = cod.convert(to_six, _from=BINCMap.SIX, _to=BINCMap.BINARY)
-        to_ten = cod.convert(to_two, _from=BINCMap.BINARY)
-        print(f'From ten: {num}, to six: {to_six}, to two: {to_two}, back to ten: {to_ten}')
+    base = BaseBasic()
+    original = 'AB'
+    enco_text = base.encode(original)
+    deco_text = base.decode(enco_text)
+    print(f'Original: {original}\nBase encoded: {enco_text}\nBase decoded: {deco_text}')

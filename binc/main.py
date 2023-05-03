@@ -2,10 +2,6 @@ from binc.map import BINCMap
 
 
 class BINC:
-    def __init__(self):
-        # TODO : required?
-        pass
-
     def convert(self, number: int, _from: int, _to: int = BINCMap.DECIMAL) -> int:
         if number < 0:
             raise ValueError('ValueError: Input in correct type, but cannot be lower then zero.')
